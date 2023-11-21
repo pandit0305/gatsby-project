@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components";
+import logo from '../images/logodensity.png';
 
 const links = [
     {
@@ -22,30 +23,31 @@ const links = [
 const Header = ()=>{
 
     return (
-        <HeaderBox>
-            <Box>
-                <div>
-                    <LogoText>density</LogoText>
-                </div>
-                <MenuBox>
-                    {
-                        links.map((link)=>(
-                            <Typography>{link.text}</Typography>
-                        ))
-                    }
-                    <Button>TRADE NOW</Button>
-                </MenuBox>
-            </Box>
-        </HeaderBox>
+        <>
+            <HeaderBox>
+                <Box>
+                    <div>
+                        <Logo src={logo} alt="" />
+                    </div>
+                    <MenuBox>
+                        {
+                            links.map((link)=>(
+                                <Typography>{link.text}</Typography>
+                            ))
+                        }
+                        <Button>TRADE NOW</Button>
+                    </MenuBox>
+                </Box>
+            </HeaderBox>
+        </>
     )
 }
 
 export default Header
 
 const HeaderBox = styled.div`
-height:25%;
+height:100px;
 border: 0px 0px 1px 0px;
-gap: 387px;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -68,6 +70,10 @@ const Box = styled.div`
 const MenuBox = styled.div`
     display:flex;
     flex-wrap:wrap;
+`;
+
+const Logo = styled.img`
+    margin-top:15px;
 `;
 
 const Typography = styled.p`
@@ -93,11 +99,4 @@ const Button = styled.button`
     background: linear-gradient(85.85deg, #D4F938 23.09%, #32D875 108.69%);
     box-shadow: 0px 0px 16px 0px rgba(168, 239, 156, 0.8);
 
-`;
-
-const LogoText = styled.p`
-    font-weight:100;
-    font-size:24px;
-    font-family:sans-serif;
-    color: rgba(226, 255, 111, 1);
 `;
