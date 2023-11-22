@@ -10,6 +10,7 @@ import ExploreMarket from '../components/exploreMarket';
 import Frontiers from '../components/frontiers';
 import StartSmallEarnBig from '../components/startSmallEarnBig';
 import ThreeEasyStep from '../components/threeEasyStep';
+import BackedByTheBest from '../components/backedByTheBest';
 import Footer from "../components/footer";
 
 const IndexPage = () => {
@@ -25,6 +26,7 @@ const IndexPage = () => {
       <Frontiers/>
       <StartSmallEarnBig/>
       <ThreeEasyStep/>
+      <BackedByTheBest/>
     </Main>
       <Footer/>
     </>

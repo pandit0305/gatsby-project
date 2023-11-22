@@ -70,6 +70,7 @@ const Div = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-wrap:wrap;
 `;
 
 const AccountSection = styled.div`
